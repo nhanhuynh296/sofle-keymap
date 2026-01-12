@@ -22,16 +22,26 @@
         compatible = "zmk,conditional-layers";
 
         adjust_layer {
-            if-layers = <2 3>;
-            then-layer = <4>;
+            if-layers = <1 2>;
+            then-layer = <3>;
+        };
+    };
+
+    macros {
+        pw: pw {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(W) &kp N3 &kp D &kp N &kp E &kp S &kp D &kp AT &kp Y &kp EXCL &kp N9 &kp N8 &kp N4 &kp N5 &kp EXCL>;
+            label = "PW";
+            wait-ms = <20>;
         };
     };
 
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
-            label = "default";
+        base_layer {
+            label = "base";
 
             // ------------------------------------------------------------------------------------------------------------
             // |   `   |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |       |
@@ -51,20 +61,8 @@
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
 
-        code_editor {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-            >;
-
+        code_layer {
             label = "code";
-        };
-
-        lower_layer {
-            label = "lower";
 
             // TODO: Some binds are waiting for shifted keycode support.
             // ------------------------------------------------------------------------------------------------------------
@@ -76,17 +74,17 @@
 
             bindings = <
 &kp GRAVE  &kp F1    &kp F2  &kp F3    &kp F4    &kp F5                       &kp F6  &kp F7          &kp F8          &kp F9           &kp F10       &kp F11
-&kp GRAVE  &kp N1    &kp N2  &kp N3    &kp N4    &kp N5                       &trans  &trans          &kp UP_ARROW    &trans           &trans        &kp F12
+&kp GRAVE  &kp N1    &kp N2  &kp N3    &kp N4    &kp N5                       &trans  &trans          &kp UP_ARROW    &trans           &kp END       &kp F12
 &kp TAB    &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT                    &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp COLON     &kp DOUBLE_QUOTES
-&trans     &trans    &trans  &trans    &kp LBRC  &kp RBRC   &trans    &trans  &trans  &trans          &kp SEMI        &kp COLON        &kp QUESTION  &kp PIPE
+&trans     &trans    &trans  &trans    &trans    &trans     &trans    &trans  &trans  &trans          &kp LT          &kp GT           &kp QUESTION  &kp PIPE
                      &trans  &trans    &trans    &trans     &trans    &trans  &trans  &trans          &kp LEFT_BRACE  &kp RIGHT_BRACE
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
 
-        raise_layer {
-            label = "raise";
+        macro_layer {
+            label = "macro";
 
             // ------------------------------------------------------------------------------------------------------------
             // | BTCLR | BT1  | BT2  |  BT3  |  BT4  |  BT5 |                |      |      |       |      |       |       |
@@ -100,10 +98,12 @@
 &trans      &kp INS       &kp PSCRN     &kp K_CMENU   &trans        &trans                          &kp PG_UP  &trans    &kp UP    &trans     &kp N0   &trans
 &trans      &kp LALT      &kp LCTRL     &kp LSHFT     &trans        &kp CLCK                        &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT  &kp DEL  &kp BSPC
 &trans      &kp K_UNDO    &kp K_CUT     &kp K_COPY    &kp K_PASTE   &trans        &trans    &trans  &trans     &trans    &trans    &trans     &trans   &trans
-                          &trans        &trans        &trans        &trans        &trans    &trans  &trans     &trans    &trans    &trans
+                          &trans        &trans        &trans        &trans        &trans    &pw     &trans     &trans    &trans    &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings =
+                <&inc_dec_kp C_VOL_DN C_VOL_UP>,
+                <&inc_dec_kp PG_UP PG_DN>;
         };
 
         adjust_layer {
@@ -116,11 +116,11 @@
 
             label = "adjust";
             bindings = <
-&bt BT_CLR         &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4                               &kp W  &none  &none  &none  &none  &none
-&ext_power EP_TOG  &rgb_ug RGB_HUD  &rgb_ug RGB_HUI  &rgb_ug RGB_SAD  &rgb_ug RGB_SAI  &rgb_ug RGB_EFF                            &none  &none  &none  &none  &none  &none
-&none              &rgb_ug RGB_BRD  &rgb_ug RGB_BRI  &none            &none            &none                                      &none  &none  &none  &none  &none  &none
-&none              &none            &none            &none            &none            &none            &rgb_ug RGB_TOG    &none  &none  &none  &none  &none  &none  &none
-                                    &none            &none            &none            &none            &none              &none  &none  &none  &none  &none
+&bt BT_CLR         &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4                               &trans  &none  &none  &none  &none  &none
+&ext_power EP_TOG  &rgb_ug RGB_HUD  &rgb_ug RGB_HUI  &rgb_ug RGB_SAD  &rgb_ug RGB_SAI  &rgb_ug RGB_EFF                            &none   &none  &none  &none  &none  &none
+&none              &rgb_ug RGB_BRD  &rgb_ug RGB_BRI  &none            &none            &none                                      &none   &none  &none  &none  &none  &none
+&none              &none            &none            &none            &none            &none            &rgb_ug RGB_TOG    &none  &none   &none  &none  &none  &none  &none
+                                    &none            &none            &none            &none            &none              &none  &none   &none  &none  &none
             >;
         };
     };
