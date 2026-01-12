@@ -1,7 +1,7 @@
 layout: {zmk_keyboard: sofle}
 layers:
   base: [ESC, '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '=', TAB, Q, W, E, R, T, Y, U, I, O, P, BACKSPACE, LSHIFT, A, S, D, F, G, H, J, K, L, ;, '''', RCTRL,
-    Z, X, C, V, B, MUTE, '', N, M, ',', ., /, \, macro, LGUI, LALT, code, SPACE, code, SPACE, ENTER, '[', ']']
+    Z, X, C, V, B, MUTE, COFFEE, N, M, ',', ., /, ENTER, macro, LGUI, LALT, code, SPACE, code, SPACE, ENTER, '[', ']']
   code:
   - '`'
   - F1
@@ -14,10 +14,10 @@ layers:
   - F8
   - F9
   - F10
-  - F11
+  - '-'
   - '`'
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - F11
+  - F12
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -25,8 +25,8 @@ layers:
   - {t: ▽, type: trans}
   - UP ARROW
   - {t: ▽, type: trans}
-  - END
-  - F12
+  - {t: ▽, type: trans}
+  - \
   - {t: ▽, type: trans}
   - Ctl+A
   - Ctl+S
@@ -37,7 +37,7 @@ layers:
   - LEFT ARROW
   - DOWN ARROW
   - RIGHT ARROW
-  - ':'
+  - END
   - '"'
   - {t: ▽, type: trans}
   - UNDO
@@ -52,7 +52,7 @@ layers:
   - <
   - '>'
   - '?'
-  - '|'
+  - ENTER
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -76,8 +76,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - CLCK
   - {t: ▽, type: trans}
-  - INS
   - PSCRN
   - CMENU
   - {t: ▽, type: trans}
@@ -89,17 +89,17 @@ layers:
   - PSCRN
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - LALT
-  - LCTRL
-  - LSHFT
   - {t: ▽, type: trans}
-  - CLCK
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - PG DN
   - LEFT
   - DOWN
   - RIGHT
-  - DEL
-  - BSPC
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - UNDO
   - CUT
