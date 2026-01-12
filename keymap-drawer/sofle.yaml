@@ -1,7 +1,7 @@
 layout: {zmk_keyboard: sofle}
 layers:
   base: [ESC, '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '=', TAB, Q, W, E, R, T, Y, U, I, O, P, BACKSPACE, LSHIFT, A, S, D, F, G, H, J, K, L, ;, '''', RCTRL,
-    Z, X, C, V, B, MUTE, LOCK, N, M, ',', ., /, ENTER, macro, LGUI, LALT, code, SPACE, code, SPACE, ENTER, '[', ']']
+    Z, X, C, V, B, MUTE, Gui+L, N, M, ',', ., /, ENTER, macro, LGUI, LALT, code, SPACE, code, SPACE, ENTER, '[', ']']
   code:
   - '`'
   - F1
@@ -28,10 +28,10 @@ layers:
   - {t: ▽, type: trans}
   - \
   - {t: ▽, type: trans}
-  - Ctl+A
-  - Ctl+S
-  - Ctl+D
-  - Ctl+F
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - LEFT ARROW
@@ -40,18 +40,18 @@ layers:
   - END
   - '"'
   - {t: ▽, type: trans}
-  - UNDO
-  - CUT
+  - AC UNDO
+  - AC CUT
   - COPY
   - PASTE
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - PREVIOUS
+  - PLAY PAUSE
+  - FAST FORWARD
   - {t: ▽, type: trans}
-  - <
-  - '>'
-  - '?'
   - ENTER
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
