@@ -1,9 +1,9 @@
 layout: {zmk_keyboard: sofle}
 layers:
-  default: [ESC, '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', DELETE, CAPSLOCK, Q, W, E, R, T, Y, U, I, O, P, BSPC, TAB, A, S, D, F, G, H, J, K, L, ;, '''',
-    LSHFT, Z, X, C, V, B, MUTE, '', N, M, ',', ., /, RSHFT, LGUI, LALT, LCTRL, lower, RET, SPACE, raise, RCTRL, RALT, RGUI]
-  lower:
-  - {t: ▽, type: trans}
+  base: [ESC, '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '=', TAB, Q, W, E, R, T, Y, U, I, O, P, BACKSPACE, LSHIFT, A, S, D, F, G, H, J, K, L, ;, '''', RCTRL,
+    Z, X, C, V, B, MUTE, '', N, M, ',', ., /, \, macro, LGUI, LALT, code, SPACE, SPACE, code, ENTER, '[', ']']
+  code:
+  - '`'
   - F1
   - F2
   - F3
@@ -21,11 +21,11 @@ layers:
   - '3'
   - '4'
   - '5'
-  - '6'
-  - '7'
-  - '8'
-  - '9'
-  - '0'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - UP ARROW
+  - {t: ▽, type: trans}
+  - END
   - F12
   - TAB
   - '!'
@@ -33,26 +33,26 @@ layers:
   - '#'
   - $
   - '%'
-  - ^
-  - '&'
-  - KP MULTIPLY
-  - (
-  - )
-  - '|'
   - {t: ▽, type: trans}
-  - '='
-  - '-'
-  - KP PLUS
-  - '{'
-  - '}'
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - '['
-  - ']'
-  - ;
+  - LEFT ARROW
+  - DOWN ARROW
+  - RIGHT ARROW
   - ':'
-  - \
+  - '"'
   - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - <
+  - '>'
+  - '?'
+  - '|'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -61,9 +61,9 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  raise:
+  - '{'
+  - '}'
+  macro:
   - BT CLR
   - {t: BT, h: '0'}
   - {t: BT, h: '1'}
@@ -114,13 +114,13 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&pw'
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -131,7 +131,7 @@ layers:
   - {t: BT, h: '2'}
   - {t: BT, h: '3'}
   - {t: BT, h: '4'}
-  - W
+  - {t: ▽, type: trans}
   - ''
   - ''
   - ''
@@ -175,13 +175,13 @@ layers:
   - ''
   - ''
   - ''
-  - ''
-  - ''
-  - ''
   - {type: held}
   - ''
   - ''
   - {type: held}
+  - ''
+  - ''
+  - ''
   - ''
   - ''
   - ''
