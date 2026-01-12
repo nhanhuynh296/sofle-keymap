@@ -16,23 +16,23 @@ layers:
   - F10
   - F11
   - '`'
-  - '1'
-  - '2'
-  - '3'
-  - '4'
-  - '5'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - UP ARROW
   - {t: ▽, type: trans}
   - END
   - F12
-  - TAB
-  - '!'
-  - '@'
-  - '#'
-  - $
-  - '%'
+  - {t: ▽, type: trans}
+  - Ctl+A
+  - Ctl+S
+  - Ctl+D
+  - Ctl+F
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - LEFT ARROW
   - DOWN ARROW
@@ -40,10 +40,10 @@ layers:
   - ':'
   - '"'
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - UNDO
+  - CUT
+  - COPY
+  - PASTE
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -86,7 +86,7 @@ layers:
   - {t: ▽, type: trans}
   - UP
   - {t: ▽, type: trans}
-  - '0'
+  - PSCRN
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - LALT
