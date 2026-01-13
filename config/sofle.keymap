@@ -104,11 +104,11 @@
             //                |      |       |       |      |      |  |      |      |      |       |      |
 
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                  &none      &none     &none     &none      &none      &none
-&kp CLCK    &none         &kp PSCRN     &kp K_CMENU   &none         &none                         &kp PG_UP  &none     &kp UP    &none      &kp PSCRN  &kp DEL
-&none       &none         &none         &none         &none         &none                         &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT  &none      &none
-&none       &kp K_UNDO    &kp K_CUT     &kp K_COPY    &kp K_PASTE   &none         &none    &none  &none      &none     &none     &none      &none      &none
-                          &none         &none         &none         &none         &none    &pw    &none      &none     &none     &none
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                  &none       &none     &none     &none      &none      &none
+&kp CLCK    &none         &kp PSCRN     &kp K_CMENU   &none         &none                         &kp PG_UP   &none     &kp UP    &none      &kp PSCRN  &kp DEL
+&none       &none         &none         &none         &none         &none                         &kp PG_DN   &kp LEFT  &kp DOWN  &kp RIGHT  &none      &none
+&none       &kp K_UNDO    &kp K_CUT     &kp K_COPY    &kp K_PASTE   &none         &none    &none  &none       &none     &none     &none      &none      &none
+                          &none         &none         &none         &none         &none    &pw    &bitlocker  &none     &none     &none
             >;
 
             sensor-bindings =
